@@ -1,0 +1,221 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+   
+   
+}
+/*positioning the video in the background*/
+#forvideo{
+    position: absolute;
+    width: 100vw;
+    max-height: 100vh;
+    overflow-y: scroll;
+} 
+/*using overflow and height so it does not overflow and gets outside the video*/
+body{
+    height: 100%;
+    overflow-y: hidden;
+    
+}
+/*desingining of the main title of the project and the entire designing of the header*/
+header{
+       position: relative;
+       height: 20vh; 
+       display: flex;
+       background-color: rgba(22, 66, 104, 0.753);
+       justify-content: center;
+       align-items: center;
+}
+#maintitle{
+    text-transform: uppercase;
+    color: blanchedalmond;
+    font-size: x-large;
+    padding: 5px;
+    border: 1px solid rgb(199, 146, 81);
+    box-shadow: 1px 4px 5px rgba(22, 66, 104, 0.753);
+    text-shadow: 1px 2px 20px  ;
+}
+
+#aboutsection{
+  position: absolute;
+  right: 20px;
+  display: flex;
+ }
+ #information{
+    background-color: rgba(22, 66, 104, 0.753);
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 60vw;
+    color: rgb(224, 162, 85);
+    display: none;
+ }
+
+/*start of designing of form section */
+#formparent{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* background-color: rgb(6, 43, 79);*/
+    font-size: xx-large;
+    color:rgb(210, 175, 234);
+    
+    
+}
+#vid{
+    position: fixed;
+    top: 0;
+    right: 0;
+   width: 100%;
+   height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  
+    
+}/*to make a responsive design using media query*/
+@media(min-aspect-ratio:16/9){
+    #vid{
+        width: 100%;
+        height: auto;
+
+    }
+}
+@media(max-aspect-ratio:16/9){
+    #vid{
+        width: auto;
+        height: 100%;
+        
+    }
+}
+label{
+    width: 240px;
+    display: inline-block;
+}
+.form-elements{
+    text-transform: uppercase;
+    margin: 20px;
+    font-size: large;
+    
+}
+#btndiv{
+    display: flex;
+    justify-content: center;
+}
+#btn{
+    background-color: rgba(49, 32, 32, 0.311);
+    color: white;
+    width: 100px;
+    transition: all 1s ease;
+}
+#btn:hover{
+    color: #2196F3;
+    border-radius: 20px;
+}
+/*designing of table to store value getting stored in the form*/
+#registeredstudentparent{
+   
+    width: auto;
+    height: 200px;
+    overflow: auto;
+    display: flex;
+   border-collapse: collapse;
+    flex-direction: column;
+    border: 1px solid black;
+  
+}
+/* Toggle button container styling */
+.toggle-container {
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.toggle-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Toggle button appearance */
+.toggle-button {
+    display: block;
+    
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-container input[type="checkbox"]:checked + .toggle-button {
+    background-color: #2196F3;
+}
+
+/* Toggle button indicator (dot) */
+.toggle-button::after {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease;
+}
+
+/* Checked (on) state for dot */
+.toggle-container input[type="checkbox"]:checked + .toggle-button::after {
+    transform: translateX(20px);
+    
+}
+
+#secondtitle{
+    text-transform: uppercase;
+    color: blanchedalmond;
+    font-size: x-large;
+    padding: 5px;
+    border: 1px solid rgb(199, 146, 81);
+    box-shadow: 1px 4px 5px rgba(22, 66, 104, 0.753);
+    text-shadow: 1px 2px 20px  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}/*designing of table head and table data*/
+#studenttable{
+    border: 1px solid black;
+    color: blanchedalmond;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    letter-spacing: 1px;
+    font-size: larger;
+    font-weight: bolder;
+    text-transform: uppercase;
+    
+      
+}
+tr{
+    border: 1px solid black;
+    
+}
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+@media (max-width:600px){
+    #studenttable{
+        font-size: 6px;
+
+    }
+    #secondtitle{
+        font-size: xx-small;
+    }
+}

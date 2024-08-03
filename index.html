@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>student registration</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon1.png">
+ </head>
+ <body>
+   <!--inserting video to playback in background for more appealing look-->
+   <video autoplay loop muted plays-inline id="vid" src="vid 5 60fps.mp4"></video>
+   <div id="forvideo"><!--making a div to wrap everything inside it so the video could be played in the background-->
+    <header><!--using semnatic tag for better search engine optimiozation-->
+     
+       <h1 id="maintitle">student registration system</h1>
+    
+      <div id="aboutsection"><!--info section containing information about the webpage-->
+         <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
+            <path fill="#6a1010" d="M10 .4C4.697.4.399 4.698.399 10A9.6 9.6 0 0 0 10 19.601c5.301 0 9.6-4.298 9.6-9.601c0-5.302-4.299-9.6-9.6-9.6m.896 3.466c.936 0 1.211.543 1.211 1.164c0 .775-.62 1.492-1.679 1.492c-.886 0-1.308-.445-1.282-1.182c0-.621.519-1.474 1.75-1.474M8.498 15.75c-.64 0-1.107-.389-.66-2.094l.733-3.025c.127-.484.148-.678 0-.678c-.191 0-1.022.334-1.512.664l-.319-.523c1.555-1.299 3.343-2.061 4.108-2.061c.64 0 .746.756.427 1.92l-.84 3.18c-.149.562-.085.756.064.756c.192 0 .82-.232 1.438-.719l.362.486c-1.513 1.512-3.162 2.094-3.801 2.094" />
+         </svg>
+        <div id="information">Our Student Registration System offers a comprehensive solution for managing student enrollment and tracking. Key functionalities include:
+            <br>
+            <br>
+            Student Enrollment: Register new students by entering their personal details and academic information.
+            <br>
+            <br>
+            Student Records Display: View and manage a list of registered students. This section includes details such as Student Name, Student ID, Email ID, and Contact Number.
+         
+         </div>
+       </div>
+    </header>
+   
+    <section id="formparent"> <!--use of semnatic tag and section which contains form-->
+    
+    
+      <form action="">
+         <div class="form-elements">
+            <label for="name">student name:</label>
+            <input id="name" type="text" name="name" placeholder="NAME" pattern="[a-zA-Z\s]+" title="Only letters and spaces are allowed." required>
+         </div>
+         <div class="form-elements">
+            <label for="id">student id:</label>
+            <input id="id" type="number" name="id" placeholder="ID">
+         </div>
+         <div class="form-elements">
+            <label for="email">email id:</label>
+            <input id="email" type="email" name="email" placeholder="EMAIL">
+         </div>
+         <div class="form-elements">
+            <label for="phonenumber">contact no:</label>
+            <input id="phonenumber" type="tel" name="phonenumber" placeholder="PHONE NO" pattern="\d{10}" required>
+         </div>
+         <div class="form-elements" id="btndiv" >
+            <button id="btn" type="submit">register</button>
+        </div>
+
+      </form>
+    </section>
+    <section id="registeredstudentparent"> <!--section which containes values of the registered students-->
+      <div class="toggle-container"> <!--toggle button-->
+         <input type="checkbox" id="toggle">
+         <label for="toggle" class="toggle-button"></label>
+      </div>
+      <h1 id="secondtitle">registered students</h1>
+      <table id="studenttable">
+         <thead>
+            <tr>
+               <th>name</th>
+               <th>id</th>
+               <th>email</th>
+               <th>mobile no</th>
+               <th>action</th>
+            </tr>
+         </thead>
+         <tbody id="data" class="dataitems">
+            
+         </tbody>
+      </table>
+    </section>
+   </div>
+ </body>
+ </html>
